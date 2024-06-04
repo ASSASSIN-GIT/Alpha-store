@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Cart</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .cart, .shipping-info {
+      width: 48%;
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart h2, .shipping-info h2 {
+      border-bottom: 2px solid #7fc029;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .cart-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+
+    .cart-details {
+      flex: 1;
+    }
+
+    .cart-details h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .cart-details p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .cart-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #7fc029;
+    }
+
+    .cart-actions {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 0;
+    }
+
+    .cart-action-button {
+      padding: 10px 20px;
+      background-color: #7fc029;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cart-action-button:hover {
+      background-color: #45a049;
+    }
+
+    .cart-total {
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .shipping-info-details {
+      margin-top: 10px;
+    }
+
+    .shipping-info-details-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .shipping-info-details-input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .checkout-button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #7fc029;
+     
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .checkout-button:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      color: #7fc029;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cart">
+      <h2>My Cart</h2>
+      <div class="cart-item">
+        <img class="cart-image" src="./cyberpunk2077 copy.jpg" alt="Cyberpunk2077">
+        <div class="cart-details">
+          <h3>Cyberpunk2077</h3>
+          <p>B&H #HA1552 - MFR #1552</p>
+          <p>Calculate Shipping</p>
+          <p>Accessories</p>
+          <p>Protection Plans starting at $14.99</p>
+          <button class="cart-action-button">See Options</button>
+        </div>
+        <div class="cart-price">$169.99</div>
+      </div>
+      <div class="cart-actions">
+        <button class="cart-action-button">Save for Later</button>
+        <button class="cart-action-button">Remove</button>
+      </div>
+      <div class="cart-total">
+        <h3>Item Total:</h3>
+        <p>$169.99</p>
+      </div>
+    </div>
+    <div class="shipping-info">
+      <h2>Estimate Shipping & Tax</h2>
+      <div class="shipping-info-details">
+        <label class="shipping-info-details-label" for="pickup">NYC SuperStore Pickup</label>
+        <input class="shipping-info-details-input" type="checkbox" id="pickup">
+        <a href="#">See Details</a>
+      </div>
+      <div class="shipping-info-details">
+        <label class="shipping-info-details-label" for="country">Country</label>
+        <select class="shipping-info-details-input" id="country">
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+        </select>
+      </div>
+      <div class="shipping-info-details">
+        <label class="shipping-info-details-label" for="zip">Zip Code</label>
+        <input class="shipping-info-details-input" type="text" id="zip">
+      </div>
+      <div class="shipping-info-details">
+        <h3>Subtotal:</h3>
+        <p>$169.99</p>
+      </div>
+      <div class="shipping-info-details">
+        <label class="shipping-info-details-label" for="shipping">Shipping</label>
+        <p>Calculate Above</p>
+      </div>
+      <div class="shipping-info-details">
+        <label class="shipping-info-details-label" for="sales-tax">Sales Tax</label>
+        <p>Calculate Above</p>
+      </div>
+      <div class="shipping-info-details">
+        <h3>Total:</h3>
+        <p>$169.99</p>
+      </div>
+      <button class="checkout-button">Begin Checkout</button>
+    </div>
+  </div>
+</body>
+</html>
